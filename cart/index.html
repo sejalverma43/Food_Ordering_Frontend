@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Food Finder</title>
+    <link rel="stylesheet" href="cart-styles.css">
+</head>
+<body>
+    <div class="cart-container">
+        <div class="header">
+            <button class="back-btn" onclick="window.history.back();">&lt;</button>
+            <h1>Cart Food</h1>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-summary">
+            <p>Item total: $<span id="item-total">0.00</span></p>
+            <p>Delivery charge: $<span id="delivery-charge">1.00</span></p>
+            <p>Tax: $<span id="tax">0.50</span></p>
+            <p class="total">Total: $<span id="total-amount">0.00</span></p>
+        </div>
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>

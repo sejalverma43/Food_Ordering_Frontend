@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="Images/Location icon.png" alt="Location Icon">
+            <div class="menu">
+                <img src="Images/list.png" alt="menu">
+            </div>
+        </div>
+        <div class="title">Find good</div>
+        <div class="subtitle">Food around you</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search your fav food">
+            <button>
+                <img src="Images/glass.png" alt="Search Icon">
+            </button>
+        </div>
+        <div class="find-section">
+            <div class="find-title">Find <span>5km &gt;</span></div>
+            <div class="options">
+                <button class="option active">Set Meal</button>
+                <button class="option">Hot sale</button>
+                <button class="option">Popularity</button>
+            </div>
+        </div>
+
+        <div class="food-items">
+            <div class="food-item">
+                <img src="Images/Cheeze Pizza.png" alt="Cheese Pizza">
+                <div class="food-info">
+                    <p class="food-name">Cheese Pizza</p>
+                    <p class="food-details">50min | 4.8</p>
+                    <p class="food-price">$12.99</p>
+                </div>
+                <div class="food-actions">
+                    <input type="number" id="cheesePizzaQuantity" value="1" min="1">
+                    <button onclick="addToCart('Cheese Pizza', 12.99, 'Cheeze Pizza.png', event)">Add to Cart</button>
+                </div>
+                <button class="like-btn" onclick="toggleLike(this)">❤️</button>
+            </div>
+
+            <div class="food-item">
+                <img src="Images/Fruit Cake.png" alt="Fruit Cake">
+                <div class="food-info">
+                    <p class="food-name">Fruit Cake</p>
+                    <p class="food-details">20min | 4.5</p>
+                    <p class="food-price">$4.88</p>
+                </div>
+                <div class="food-actions">
+                    <input type="number" id="fruitCakeQuantity" value="1" min="1">
+                    <button onclick="addToCart('Fruit Cake', 4.88, 'Fruit Cake.png', event)">Add to Cart</button>
+                </div>
+                <button class="like-btn" onclick="toggleLike(this)">❤️</button>
+            </div>
+
+            <button onclick="window.location.href='cart/index.html'">View Cart</button>
+        </div>
+
+        <div id="timer-section">
+            <h2>Special Offer Ends In:</h2>
+            <div id="time">05:00</div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="timer.js"></script>
+</body>
+</html>
